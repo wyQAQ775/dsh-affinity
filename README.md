@@ -21,7 +21,7 @@
 
 先把这个仓库放到本机，两种都行：
 
-- 有 git：`git clone <这个仓库的地址> D:/dsh-plugins/dsh-affinity`
+- 有 git：`git clone https://github.com/wyQAQ775/dsh-affinity.git D:/dsh-plugins/dsh-affinity`
 - 没有 git：下载 zip，解压到 `D:/dsh-plugins/`，得到 `D:/dsh-plugins/dsh-affinity/`（里面应该直接有 `package.json`，不要再套一层目录）
 
 然后编辑 `%USERPROFILE%\.dsh\profiles\desktop\package.json`，在 `dependencies` 里加一行：
