@@ -1,0 +1,39 @@
+{
+  "name": "@local/dsh-affinity",
+  "version": "0.1.0",
+  "private": false,
+  "description": "鲸宝好感度面板：读 data/*.json，在侧栏渲染每只鲸宝的好感度卡",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "affinity",
+    "dashboard"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "data/*.json"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  }
+}
